@@ -1,0 +1,58 @@
+{
+  "name": "@sendapi/mcp-server",
+  "version": "1.0.0",
+  "description": "Official SendAPI MCP server — send WhatsApp, SMS, OTP, and email from any AI agent (Claude, ChatGPT/Codex, Cursor, Windsurf, Cline) via one REST API.",
+  "type": "module",
+  "bin": {
+    "sendapi-mcp": "dist/index.js",
+    "sendapi-mcp-http": "dist/http.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "start:http": "node dist/http.js",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "keywords": [
+    "sendapi",
+    "mcp",
+    "model-context-protocol",
+    "ai-agent",
+    "claude",
+    "sms",
+    "email",
+    "whatsapp",
+    "otp",
+    "messaging"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sendapi/sendapi-mcp"
+  },
+  "homepage": "https://sendapi.co/docs/mcp",
+  "bugs": {
+    "url": "https://github.com/sendapi/sendapi-mcp/issues"
+  },
+  "author": "SendAPI <support@sendapi.co>",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^4.19.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}
